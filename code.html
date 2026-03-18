@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L.T. ROBOTICS | ACHIEVEMENTS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-highest": "#353535",
+                        "tertiary-fixed": "#e4e2e1",
+                        "surface-variant": "#353535",
+                        "primary": "#ffb4aa",
+                        "inverse-on-surface": "#303030",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "on-secondary-fixed": "#410000",
+                        "surface-container": "#1f1f1f",
+                        "on-primary-container": "#5c0002",
+                        "on-surface-variant": "#e9bcb6",
+                        "on-surface": "#e2e2e2",
+                        "surface-dim": "#131313",
+                        "on-background": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#393939",
+                        "on-tertiary": "#303030",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#2a2a2a",
+                        "inverse-primary": "#c0000b",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "secondary": "#ffb4a8",
+                        "on-primary-fixed": "#410001",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-secondary-container": "#ffdcd7",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "primary-fixed": "#ffdad5",
+                        "tertiary": "#c8c6c6",
+                        "outline": "#b08782",
+                        "surface-tint": "#ffb4aa",
+                        "on-primary-fixed-variant": "#930006",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#ffdad4",
+                        "secondary-container": "#ce0301",
+                        "on-error": "#690005",
+                        "tertiary-container": "#929090",
+                        "primary-container": "#ff5546",
+                        "on-primary": "#690003",
+                        "outline-variant": "#5f3f3a",
+                        "surface-container-low": "#1b1b1b",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#690000",
+                        "background": "#131313"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hud-grid {
+            background-image: linear-gradient(to right, rgba(255, 180, 170, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 180, 170, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glitch-hover:hover {
+            text-shadow: 2px 0 #ffb4aa, -2px 0 #ce0301;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#131313] dark:bg-[#131313] border-b-0">
+<div class="text-2xl font-bold tracking-tighter text-[#ffb4aa] dark:text-[#ffb4aa] font-headline">L.T. ROBOTICS</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Teams</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#ffb4aa] border-b-2 border-[#ffb4aa] pb-1" href="#">Achievements</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Newsletters</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Photos</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Sponsors</a>
+</div>
+<button class="bg-primary-container text-on-primary font-headline font-bold px-6 py-2 tracking-widest uppercase hover:bg-primary transition-all duration-200 scale-95 active:scale-100">
+        JOIN_SQUAD
+    </button>
+</nav>
+<!-- SideNavBar (HUD Context) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col pt-24 pb-10 bg-[#131313]/80 backdrop-blur-xl w-64 border-r-0 shadow-[20px_0_40px_rgba(0,0,0,0.4)] hidden lg:flex">
+<div class="px-6 mb-8">
+<div class="font-headline font-bold text-[#ffb4aa]">LT_CORE_v4.2</div>
+<div class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] text-primary opacity-70">STATUS: OPERATIONAL</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="group flex items-center gap-4 px-6 py-3 text-gray-500 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-lg">analytics</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em]">TELEMETRY</span>
+</div>
+<div class="group flex items-center gap-4 px-6 py-3 text-gray-500 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-lg">memory</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em]">SYSTEMS</span>
+</div>
+<div class="group flex items-center gap-4 px-6 py-3 bg-[#ffb4aa] text-[#131313] font-bold">
+<span class="material-symbols-outlined text-lg">terminal</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em]">LOGS</span>
+</div>
+<div class="group flex items-center gap-4 px-6 py-3 text-gray-500 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em]">DIAGNOSTICS</span>
+</div>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full border border-outline-variant/30 text-primary py-2 font-headline text-[10px] tracking-widest hover:bg-primary/10 transition-colors">
+            REFRESH_DATA
+        </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:pl-64 pt-24 min-h-screen hud-grid">
+<header class="px-8 py-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 font-label text-[10px] text-primary/30 tracking-tighter">
+            COORD: 42.3601° N, 71.0589° W<br/>
+            REF_ID: LT_ACH_099
+        </div>
+<div class="relative z-10">
+<div class="inline-block border-l-4 border-primary pl-4 mb-4">
+<h1 class="font-headline text-5xl md:text-7xl font-black tracking-tighter uppercase italic">
+                    Deployment <span class="text-primary">History</span>
+</h1>
+</div>
+<p class="max-w-2xl text-on-surface-variant font-light tracking-wide leading-relaxed">
+                Chronological mission data for L.T. Robotics units. High-performance analysis of competitive 
+                engagements and engineering excellence benchmarks.
+            </p>
+</div>
+</header>
+<!-- Operational Impact Timeline -->
+<section class="px-8 pb-24">
+<div class="grid grid-cols-1 gap-12 relative">
+<!-- Central Line -->
+<div class="absolute left-0 lg:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/20 hidden lg:block"></div>
+<!-- Austin Regional Championship -->
+<div class="relative flex flex-col lg:flex-row items-center justify-between w-full group">
+<div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary z-20 group-hover:scale-125 transition-transform"></div>
+<div class="lg:w-[45%] w-full bg-surface-container-low p-6 border-l-2 border-primary relative">
+<div class="absolute -top-3 -left-1 font-label text-[10px] text-primary bg-surface px-2">MISSION_055</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase">Austin Regional Championship</h3>
+<p class="font-label text-xs text-secondary tracking-widest">REGION: CENTRAL_TEXAS</p>
+</div>
+<div class="text-right">
+<span class="font-headline text-xl font-black text-primary">RANK: TOP_SEED</span>
+</div>
+</div>
+<div class="h-[1px] bg-gradient-to-r from-primary/30 to-transparent mb-4"></div>
+<p class="text-sm text-on-surface-variant mb-6">Full fleet deployment for regional dominance. Coordinated maneuvers executed across all operational sectors with high efficiency.</p>
+<div class="mb-6">
+<span class="font-label text-[10px] text-secondary opacity-50 block mb-2 uppercase tracking-widest">Squad_Deployment</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654J</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654K</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654V</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654X</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654B</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654W</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654T</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654Z</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654G</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654A</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654Y</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">UNIT_PERFORMANCE</span>
+<span class="font-headline text-lg font-bold">PEAK_CAPACITY</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">ENGAGEMENT_ID</span>
+<span class="font-headline text-lg font-bold">ARC-2024</span>
+</div>
+</div>
+</div>
+<div class="lg:w-[45%] w-full mt-4 lg:mt-0 lg:text-right font-headline text-4xl font-black text-outline-variant/20 opacity-50 select-none">
+                    Q2_2024
+                </div>
+</div>
+<!-- Texas Region 4 State Qualifiers -->
+<div class="relative flex flex-col lg:flex-row-reverse items-center justify-between w-full group">
+<div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary z-20 group-hover:scale-125 transition-transform"></div>
+<div class="lg:w-[45%] w-full bg-surface-container-high p-6 border-r-2 border-primary text-right relative">
+<div class="absolute -top-3 -right-1 font-label text-[10px] text-primary bg-surface px-2">MISSION_051</div>
+<div class="flex justify-between flex-row-reverse items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase">Texas Region 4 Qualifiers</h3>
+<p class="font-label text-xs text-secondary tracking-widest">REGION: NORTH_TEXAS</p>
+</div>
+<div class="text-left">
+<span class="font-headline text-xl font-black text-primary">STATUS: ADVANCED</span>
+</div>
+</div>
+<div class="h-[1px] bg-gradient-to-l from-primary/30 to-transparent mb-4"></div>
+<p class="text-sm text-on-surface-variant mb-6">Strategic advancement secured by select tactical units. Systems optimized for high-pressure competitive environment.</p>
+<div class="mb-6 text-right">
+<span class="font-label text-[10px] text-secondary opacity-50 block mb-2 uppercase tracking-widest">Squad_Deployment</span>
+<div class="flex flex-wrap gap-2 justify-end">
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654J</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654K</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654X</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654B</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654G</span>
+</div>
+</div>
+<div class="flex gap-4 justify-end">
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">DESIGN_SCORE</span>
+<span class="font-headline text-lg font-bold">96.8/100</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">LOG_ENTRIES</span>
+<span class="font-headline text-lg font-bold">SYNC_STABLE</span>
+</div>
+</div>
+</div>
+<div class="lg:w-[45%] w-full mt-4 lg:mt-0 font-headline text-4xl font-black text-outline-variant/20 opacity-50 select-none">
+                    Q1_2024
+                </div>
+</div>
+<!-- Dallas Tech Open -->
+<div class="relative flex flex-col lg:flex-row items-center justify-between w-full group">
+<div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary z-20 group-hover:scale-125 transition-transform"></div>
+<div class="lg:w-[45%] w-full bg-surface-container-low p-6 border-l-2 border-primary relative">
+<div class="absolute -top-3 -left-1 font-label text-[10px] text-primary bg-surface px-2">MISSION_044</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase">Dallas Tech Open</h3>
+<p class="font-label text-xs text-secondary tracking-widest">ARENA: METROPLEX_CENTER</p>
+</div>
+<div class="text-right">
+<span class="font-headline text-xl font-black text-primary">VICTORY</span>
+</div>
+</div>
+<div class="h-[1px] bg-gradient-to-r from-primary/30 to-transparent mb-4"></div>
+<p class="text-sm text-on-surface-variant mb-6">Technical supremacy demonstrated in autonomous programming. Units 654J, A, and Y achieved flawless execution under rapid deployment.</p>
+<div class="mb-6">
+<span class="font-label text-[10px] text-secondary opacity-50 block mb-2 uppercase tracking-widest">Squad_Deployment</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654J</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654A</span>
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654Y</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">WIN_RATE</span>
+<span class="font-headline text-lg font-bold">100%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">HEAT_SIG</span>
+<span class="font-headline text-lg font-bold">OPTIMAL</span>
+</div>
+</div>
+</div>
+<div class="lg:w-[45%] w-full mt-4 lg:mt-0 lg:text-right font-headline text-4xl font-black text-outline-variant/20 opacity-50 select-none">
+                    Q4_2023
+                </div>
+</div>
+<!-- VEX Worlds Qualification -->
+<div class="relative flex flex-col lg:flex-row-reverse items-center justify-between w-full group">
+<div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary z-20 group-hover:scale-125 transition-transform"></div>
+<div class="lg:w-[45%] w-full bg-surface-container-high p-6 border-r-2 border-primary text-right relative">
+<div class="absolute -top-3 -right-1 font-label text-[10px] text-primary bg-surface px-2">MISSION_038</div>
+<div class="flex justify-between flex-row-reverse items-start mb-4">
+<div>
+<h3 class="font-headline text-2xl font-bold tracking-tight uppercase">VEX Worlds Qualification</h3>
+<p class="font-label text-xs text-secondary tracking-widest">LEVEL: GLOBAL_ASCENSION</p>
+</div>
+<div class="text-left">
+<span class="font-headline text-xl font-black text-primary">RANK: ELITE</span>
+</div>
+</div>
+<div class="h-[1px] bg-gradient-to-l from-primary/30 to-transparent mb-4"></div>
+<p class="text-sm text-on-surface-variant mb-6">Unit 654J secured elite qualification status for international engagement. Mechanical design certified for world-class tier competition.</p>
+<div class="mb-6 text-right">
+<span class="font-label text-[10px] text-secondary opacity-50 block mb-2 uppercase tracking-widest">Squad_Deployment</span>
+<div class="flex flex-wrap gap-2 justify-end">
+<span class="px-2 py-1 bg-primary/10 border border-primary/20 text-primary font-headline text-[10px] font-bold">654J</span>
+</div>
+</div>
+<div class="flex gap-4 justify-end">
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">GLOBAL_RANK</span>
+<span class="font-headline text-lg font-bold">TOP_0.5%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label text-[8px] text-secondary opacity-50">V-LOCK</span>
+<span class="font-headline text-lg font-bold">ACTIVE</span>
+</div>
+</div>
+</div>
+<div class="lg:w-[45%] w-full mt-4 lg:mt-0 font-headline text-4xl font-black text-outline-variant/20 opacity-50 select-none">
+                    Q2_2023
+                </div>
+</div>
+</div>
+</section>
+<!-- Technical Telemetry Data Viz (Bento Grid) -->
+<section class="px-8 pb-24">
+<h2 class="font-headline text-xs tracking-[0.3em] uppercase text-primary/50 mb-8 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-primary/30"></span>
+            Operational Metrics Summary
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Data Point 1 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between h-48 border-t border-primary/20">
+<div class="flex justify-between">
+<span class="font-label text-[10px] text-secondary">AWARDS_AGGREGATE</span>
+<span class="material-symbols-outlined text-primary text-sm">military_tech</span>
+</div>
+<div>
+<div class="font-headline text-5xl font-black">32</div>
+<div class="font-label text-[10px] text-primary mt-1">+8 FROM PREV_SEASON</div>
+</div>
+</div>
+<!-- Data Point 2 -->
+<div class="md:col-span-2 bg-surface-container-lowest p-6 flex flex-col justify-between h-48 border-t border-primary/20 relative overflow-hidden">
+<div class="flex justify-between relative z-10">
+<span class="font-label text-[10px] text-secondary">WIN_PROBABILITY_ANALYSIS</span>
+<span class="material-symbols-outlined text-primary text-sm">trending_up</span>
+</div>
+<div class="relative z-10">
+<div class="font-headline text-5xl font-black">92.1<span class="text-2xl text-primary">%</span></div>
+<div class="w-full bg-surface-container h-1 mt-4">
+<div class="bg-primary h-full w-[92.1%] shadow-[0_0_10px_rgba(255,180,170,0.5)]"></div>
+</div>
+</div>
+<div class="absolute bottom-[-20px] right-[-20px] opacity-10">
+<span class="material-symbols-outlined text-[160px]">insights</span>
+</div>
+</div>
+<!-- Data Point 3 -->
+<div class="bg-primary text-on-primary p-6 flex flex-col justify-between h-48">
+<div class="flex justify-between">
+<span class="font-label text-[10px] uppercase font-bold">System_Status</span>
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<div>
+<div class="font-headline text-4xl font-black italic tracking-tighter">ELITE</div>
+<div class="font-label text-[10px] mt-1 opacity-80">STIER_RANKING_CERTIFIED</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-[#0A0A0A] border-t-0">
+<div class="mb-6 md:mb-0">
+<div class="text-[#ffb4aa] font-black font-headline tracking-tighter">L.T. ROBOTICS</div>
+<div class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 mt-2">
+            © 2024 L.T. ROBOTICS | HIGH_PERFORMANCE_ENGINEERING
+        </div>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Sponsorship_Packet</a>
+</div>
+</footer>
+</body></html>

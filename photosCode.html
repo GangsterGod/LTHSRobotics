@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L.T. ROBOTICS | MEDIA_ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#474747",
+              "surface-container-highest": "#353535",
+              "tertiary-fixed": "#e4e2e1",
+              "surface-variant": "#353535",
+              "primary": "#ffb4aa",
+              "inverse-on-surface": "#303030",
+              "primary-fixed-dim": "#ffb4aa",
+              "on-secondary-fixed": "#410000",
+              "surface-container": "#1f1f1f",
+              "on-primary-container": "#5c0002",
+              "on-surface-variant": "#e9bcb6",
+              "on-surface": "#e2e2e2",
+              "surface-dim": "#131313",
+              "on-background": "#e2e2e2",
+              "on-error-container": "#ffdad6",
+              "surface-bright": "#393939",
+              "on-tertiary": "#303030",
+              "surface": "#131313",
+              "on-tertiary-container": "#2a2a2a",
+              "inverse-primary": "#c0000b",
+              "secondary-fixed-dim": "#ffb4a8",
+              "secondary": "#ffb4a8",
+              "on-primary-fixed": "#410001",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-secondary-container": "#ffdcd7",
+              "tertiary-fixed-dim": "#c8c6c6",
+              "primary-fixed": "#ffdad5",
+              "tertiary": "#c8c6c6",
+              "outline": "#b08782",
+              "surface-tint": "#ffb4aa",
+              "on-primary-fixed-variant": "#930006",
+              "error-container": "#93000a",
+              "inverse-surface": "#e2e2e2",
+              "surface-container-high": "#2a2a2a",
+              "secondary-fixed": "#ffdad4",
+              "secondary-container": "#ce0301",
+              "on-error": "#690005",
+              "tertiary-container": "#929090",
+              "primary-container": "#ff5546",
+              "on-primary": "#690003",
+              "outline-variant": "#5f3f3a",
+              "surface-container-low": "#1b1b1b",
+              "error": "#ffb4ab",
+              "on-secondary": "#690000",
+              "background": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .kinetic-grid {
+        background-image: linear-gradient(to right, rgba(255, 180, 170, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 180, 170, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .glass-hud {
+        backdrop-filter: blur(12px);
+        background: rgba(31, 31, 31, 0.7);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#131313] dark:bg-[#131313]">
+<div class="text-2xl font-bold tracking-tighter text-[#ffb4aa] dark:text-[#ffb4aa] font-headline">L.T. ROBOTICS</div>
+<div class="hidden md:flex space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Teams</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Achievements</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Newsletters</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#ffb4aa] border-b-2 border-[#ffb4aa] pb-1" href="#">Photos</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Sponsors</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-tighter hover:brightness-110 active:scale-95 transition-all">
+            JOIN_SQUAD
+        </button>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col pt-24 pb-10 w-64 bg-[#131313]/80 backdrop-blur-xl shadow-[20px_0_40px_rgba(0,0,0,0.4)] hidden lg:flex">
+<div class="px-6 mb-8">
+<h2 class="font-headline font-bold text-[#ffb4aa]">LT_CORE_v4.2</h2>
+<p class="font-label text-[10px] tracking-[0.2em] text-secondary">STATUS: OPERATIONAL</p>
+</div>
+<div class="flex flex-col space-y-1">
+<div class="flex items-center space-x-3 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label text-[10px] tracking-[0.2em]">TELEMETRY</span>
+</div>
+<div class="flex items-center space-x-3 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">memory</span>
+<span class="font-label text-[10px] tracking-[0.2em]">SYSTEMS</span>
+</div>
+<div class="flex items-center space-x-3 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label text-[10px] tracking-[0.2em]">LOGS</span>
+</div>
+<div class="flex items-center space-x-3 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span class="font-label text-[10px] tracking-[0.2em]">DIAGNOSTICS</span>
+</div>
+</div>
+<div class="mt-auto px-6">
+<button class="w-full border border-outline-variant/30 text-primary py-3 font-label text-[10px] tracking-[0.2em] hover:bg-primary/10 transition-colors">
+                REFRESH_DATA
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:ml-64 pt-24 min-h-screen kinetic-grid">
+<header class="px-8 mb-12 relative">
+<div class="absolute -top-4 left-8 text-primary font-label text-[10px] tracking-widest">ARCHIVE_PATH: /ROOT/MEDIA/VISUAL_TELEMETRY</div>
+<h1 class="font-headline text-6xl font-bold tracking-tighter uppercase text-on-surface mb-2">Visual Telemetry Archive</h1>
+<div class="h-1 w-24 bg-primary mb-4"></div>
+<p class="text-on-surface-variant max-w-2xl font-body leading-relaxed">
+                High-fidelity captures of our mechanical iterations, competitive deployment, and research development phases. All assets are synchronized with LT_CORE servers.
+            </p>
+</header>
+<!-- Google Drive Sync / Ingestion Zone -->
+<section class="px-8 mb-16">
+<div class="bg-surface-container-lowest border border-primary/30 p-8 flex flex-col gap-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-2 font-label text-[8px] text-primary/60 animate-pulse">LIVE_CLOUD_SYNC_ACTIVE</div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 w-full">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-surface-container-high flex items-center justify-center border border-primary/40 shadow-[0_0_15px_rgba(255,180,170,0.2)]">
+<span class="material-symbols-outlined text-primary text-4xl">cloud_sync</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface tracking-tighter">GOOGLE_DRIVE_SYNC_v2.0</h3>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+<p class="font-label text-[10px] tracking-widest text-green-500 uppercase">SYNC_STATUS: CONNECTED</p>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-2 w-full max-w-2xl">
+<label class="font-label text-[10px] text-primary tracking-widest uppercase">Active Folder Link</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-high border border-outline-variant/30 text-on-surface-variant font-mono text-[11px] px-4 py-3 focus:outline-none focus:border-primary/50 transition-colors cursor-default" readonly="" type="text" value="drive.google.com/drive/u/0/folders/LT_ROBOTICS_TELEMETRY_MAIN_01"/>
+<button class="bg-primary px-6 py-3 text-on-primary font-headline font-bold uppercase tracking-tighter text-sm flex items-center gap-2 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">sync</span>
+            RE-SYNC
+          </button>
+</div>
+</div>
+</div>
+<div class="w-full">
+<div class="flex justify-between font-label text-[10px] text-on-surface-variant mb-2">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[12px] animate-spin">refresh</span> FETCHING_ASSETS_FROM_CLOUD...</span>
+<span>STREAM_HEALTH: 98.4%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest">
+<div class="h-full bg-primary w-4/5 shadow-[0_0_10px_#ffb4aa]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Grid -->
+<section class="px-8 pb-20"><div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline text-3xl font-bold tracking-tighter uppercase text-on-surface">Drive Stream View</h2>
+<div class="flex-1 h-px bg-gradient-to-r from-primary/30 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Gallery Item 1 (Large) -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container-low border border-outline-variant/10 aspect-[21/9] border-primary/20">
+<div class="absolute top-2 left-2 z-10 font-label text-[10px] bg-primary text-on-primary px-2 py-1">TIMESTAMP: 2024.08.12</div>
+<img alt="Industrial robot arm precision work" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" data-alt="Modern industrial robot arm performing precision engineering tasks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCszWOFyyeFqUGtg8Uab6Vpre2pqtq0f3dx3C6dtk9iU6RmQfvW029iVG0cKfBkfHtfXXWs251VF7R9x4JGrVbpM-SOJz-kvJhkRoAWHx2FErAKnnFtZBmInipoQ-jbSyo3qAXm7CXQAFEJ5imxLdjr21OO5gRopYyaOHvpsT9A-iz4w6dingAzzyuTX78eVvSh4ER9GnBcNbYyl_1ln2nH0f1JO-NtJT8_vQlitIzfUqDCGcem1efxZhfi6aVl67pdwiNk1dw8JprS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[14px] text-primary">cloud_done</span>
+<span class="font-label text-[8px] text-primary/80 tracking-widest">SYNCED_FROM_DRIVE</span>
+</div><h4 class="font-headline text-2xl font-bold text-white tracking-tighter">PHASE_01: ARM_CALIBRATION</h4>
+<p class="font-label text-[10px] text-primary tracking-[0.2em] uppercase">Location: Main Lab / Bay 4</p>
+</div>
+<div class="absolute inset-0 border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="relative group overflow-hidden bg-surface-container-low border border-outline-variant/10 aspect-square border-primary/20">
+<img alt="Circuit board detail with red lights" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Extreme close up of futuristic circuit board with red LED indicator lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl75WLS422Z9sJwrMmAfCMzCjXrWWzsvu7-5bKLDxSlfU6nzat6RJdFR_OYGjES57SgCtnBgAoq7GsB36oN6MFmpJvcs9asBIZA7Ve1Uyeoze2-yxlItYLBvIbo7pK1yr-sm9EPfvTfor5v0jF6i_MxZUI_YSn3C-IDTiu1qxu7y3XHLR5JZ3iXixo0-cx1Na48xHlBnY_r8ae6ili7dINc3ZwZ9KU8MVIUJoDiqqwcgwJg4eZOn6b1-Jv9yUp_iG18Kv4j5wE0VEF"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-4 left-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[12px] text-primary">cloud_done</span>
+<span class="font-label text-[8px] text-primary/80 tracking-widest uppercase">Cloud_Asset</span>
+</div><h4 class="font-headline text-lg font-bold text-white tracking-tighter uppercase">Neural_Link_v2</h4>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="relative group overflow-hidden bg-surface-container-low border border-outline-variant/10 aspect-square border-primary/20">
+<img alt="Microchip macro shot" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Macro photography of a high performance microchip with glowing traces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlB92IF0SbstbD7TaOi_7RY7T8j6i-MOslfVMDWgiR4sSOzwNnGdXpzRV_GRMo6DMh1V3n-cdE02C3avoHlhSJ0Gn8AVmurhJJ9UqiM9BKjancrn6Kh0z2WB0fFxJmdDjXNXKEie2eZyQV0_K6D3Zwt8UGqy4pKvJVnfWDpyI3twP9nZV0iR95aqrvtRlhlEkiglH258fayzK42jQJng-_tmIB6t2HJsKhj5QNXghzjgpxUjnBhAtEFMOyvvWc6HpUTFevXiec8DqN"/>
+<div class="absolute bottom-4 left-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[12px] text-primary">cloud_done</span>
+<span class="font-label text-[8px] text-primary/80 tracking-widest uppercase">Cloud_Asset</span>
+</div><h4 class="font-headline text-lg font-bold text-white tracking-tighter uppercase">Processor_Heat_Map</h4>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="relative group overflow-hidden bg-surface-container-low border border-outline-variant/10 aspect-square border-primary/20">
+<img alt="Humanoid robot hand" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close up of a metallic humanoid robot hand reaching forward" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Oz0ioefkL_5v2DmhMIHzB4GqNdkiWApT9kgxiSLPCYqd-gY1qPzSHwD1Pqi41mx7etqEulQVj1GvIfj3lWE4ugcQkklXl4l84uhNITMak0UA7KuH_9bM72A1HuEtvFRBj25iSp9hd-CBkwNH83HWZIqQVq09b-lTUJ4i7k5uHUKW6fitsD30WxPQTWGyX1KSclJQRF6iXIE0dM8N-efdJy9GovmLdDVaJpy0u5-mXPRkQcoHJfB0pfdQK15PPa5zY-w0x-dl-h3l"/>
+<div class="absolute bottom-4 left-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[12px] text-primary">cloud_done</span>
+<span class="font-label text-[8px] text-primary/80 tracking-widest uppercase">Cloud_Asset</span>
+</div><h4 class="font-headline text-lg font-bold text-white tracking-tighter uppercase">Kinetic_Sensors</h4>
+</div>
+</div>
+<!-- Gallery Item 5 -->
+<div class="relative group overflow-hidden bg-surface-container-low border border-outline-variant/10 aspect-square border-primary/20">
+<img alt="Robot dog in motion" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A yellow industrial robot dog navigating an engineering facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5DcTUAoOkSILLfyuVm2iQqnCjF1t8JaAKYs6owPljlYATsuRDRkQDXQhbEo78WvHuLZqwAzmFv86_OghgOb7qY2h72IoFIuj22-bRMJnXZheNSQ7SC7t4DEu9h0dWR_uULxiGlVuct4qz2KPIYcVvnbbhHR3QMi5pgIUTX3KaD9QHE02zImdne3SOM-3YPU9u3AaQ21oTEDGCVwvkPX0qgKqEnRFoarMJxaxUjfQ-bKpZsM7NFNRjmWlXt6GGikoOdYKKEkEmv7bC"/>
+<div class="absolute bottom-4 left-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[12px] text-primary">cloud_done</span>
+<span class="font-label text-[8px] text-primary/80 tracking-widest uppercase">Cloud_Asset</span>
+</div><h4 class="font-headline text-lg font-bold text-white tracking-tighter uppercase">Mobile_Platform_A1</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-[#0A0A0A] border-t-0 border-outline-variant/10 mt-auto">
+<div class="mb-6 md:mb-0">
+<span class="text-[#ffb4aa] font-black font-headline tracking-tighter text-xl">L.T. ROBOTICS</span>
+<p class="font-label text-[10px] tracking-widest uppercase text-gray-600 mt-2">© 2024 L.T. ROBOTICS | HIGH_PERFORMANCE_ENGINEERING</p>
+</div>
+<div class="flex space-x-8">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Sponsorship_Packet</a>
+</div>
+</footer>
+<!-- HUD Overlay Details -->
+<div class="fixed bottom-4 right-4 z-50 pointer-events-none hidden md:block">
+<div class="glass-hud border border-primary/20 p-4 font-label text-[10px] tracking-widest text-primary flex flex-col gap-1">
+<div class="flex justify-between gap-8"><span>LATENCY</span> <span>0.002ms</span></div>
+<div class="flex justify-between gap-8"><span>STORAGE</span> <span>89.4TB / 120TB</span></div>
+<div class="flex justify-between gap-8"><span>GRID_REF</span> <span>40.7128° N, 74.0060° W</span></div>
+</div>
+</div>
+</body></html>

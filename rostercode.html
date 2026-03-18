@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L.T. ROBOTICS | TEAMS_ROSTER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#474747",
+              "surface-container-highest": "#353535",
+              "tertiary-fixed": "#e4e2e1",
+              "surface-variant": "#353535",
+              "primary": "#ffb4aa",
+              "inverse-on-surface": "#303030",
+              "primary-fixed-dim": "#ffb4aa",
+              "on-secondary-fixed": "#410000",
+              "surface-container": "#1f1f1f",
+              "on-primary-container": "#5c0002",
+              "on-surface-variant": "#e9bcb6",
+              "on-surface": "#e2e2e2",
+              "surface-dim": "#131313",
+              "on-background": "#e2e2e2",
+              "on-error-container": "#ffdad6",
+              "surface-bright": "#393939",
+              "on-tertiary": "#303030",
+              "surface": "#131313",
+              "on-tertiary-container": "#2a2a2a",
+              "inverse-primary": "#c0000b",
+              "secondary-fixed-dim": "#ffb4a8",
+              "secondary": "#ffb4a8",
+              "on-primary-fixed": "#410001",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary-fixed": "#1b1c1c",
+              "on-secondary-container": "#ffdcd7",
+              "tertiary-fixed-dim": "#c8c6c6",
+              "primary-fixed": "#ffdad5",
+              "tertiary": "#c8c6c6",
+              "outline": "#b08782",
+              "surface-tint": "#ffb4aa",
+              "on-primary-fixed-variant": "#930006",
+              "error-container": "#93000a",
+              "inverse-surface": "#e2e2e2",
+              "surface-container-high": "#2a2a2a",
+              "secondary-fixed": "#ffdad4",
+              "secondary-container": "#ce0301",
+              "on-error": "#690005",
+              "tertiary-container": "#929090",
+              "primary-container": "#ff5546",
+              "on-primary": "#690003",
+              "outline-variant": "#5f3f3a",
+              "surface-container-low": "#1b1b1b",
+              "error": "#ffb4ab",
+              "on-secondary": "#690000",
+              "background": "#131313"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .hud-bracket::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #ffb4aa;
+        border-left: 2px solid #ffb4aa;
+      }
+      .scanline {
+        background: linear-gradient(to bottom, rgba(255,180,170,0.05) 50%, rgba(0,0,0,0) 50%);
+        background-size: 100% 4px;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#131313] dark:bg-[#131313] border-b-0">
+<div class="text-2xl font-bold tracking-tighter text-[#ffb4aa] dark:text-[#ffb4aa] font-headline">L.T. ROBOTICS</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Home</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#ffb4aa] border-b-2 border-[#ffb4aa] pb-1" href="#">Teams</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Achievements</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Newsletters</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Photos</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-gray-400 hover:text-white transition-colors" href="#">Sponsors</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-wider hover:bg-primary-container transition-all active:scale-95">JOIN_SQUAD</button>
+</nav>
+<!-- Side Navigation Shell (HUD Context) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col pt-24 pb-10 bg-[#131313]/80 backdrop-blur-xl w-64 hidden lg:flex border-r-0 shadow-[20px_0_40px_rgba(0,0,0,0.4)]">
+<div class="px-6 mb-10">
+<h2 class="font-headline font-bold text-[#ffb4aa] text-lg">LT_CORE_v4.2</h2>
+<p class="font-label text-[10px] tracking-[0.2em] text-primary/60">STATUS: OPERATIONAL</p>
+</div>
+<div class="flex flex-col gap-1 flex-grow">
+<div class="flex items-center gap-4 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform group cursor-pointer">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label text-[10px] tracking-[0.2em]">TELEMETRY</span>
+</div>
+<div class="flex items-center gap-4 bg-[#ffb4aa] text-[#131313] font-bold px-6 py-3 transition-transform cursor-pointer">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-label text-[10px] tracking-[0.2em]">SYSTEMS</span>
+</div>
+<div class="flex items-center gap-4 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform group cursor-pointer">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-label text-[10px] tracking-[0.2em]">LOGS</span>
+</div>
+<div class="flex items-center gap-4 text-gray-500 px-6 py-3 hover:text-[#ffb4aa] hover:translate-x-1 transition-transform group cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+<span class="font-label text-[10px] tracking-[0.2em]">DIAGNOSTICS</span>
+</div>
+</div>
+<div class="px-6 mt-auto">
+<button class="w-full border border-outline-variant/30 text-primary py-2 font-label text-[10px] tracking-[0.2em] hover:bg-primary/10 transition-colors uppercase">REFRESH_DATA</button>
+</div>
+</aside>
+<main class="lg:ml-64 pt-24 pb-20 px-6 md:px-12">
+<!-- Hero Section -->
+<header class="relative mb-16 py-12 border-b border-outline-variant/10 overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="text-[12rem] font-black font-headline select-none">VEX_24</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-[2px] bg-primary"></div>
+<span class="font-label text-primary tracking-[0.3em] text-xs">ELITE_ELEVEN_ROSTER</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter uppercase leading-none mb-6">
+                    Our <span class="text-primary italic">Teams</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant/80 font-body leading-relaxed border-l-2 border-primary/20 pl-6">
+                    Precision engineering meets competitive excellence. L.T. Robotics fields 11 distinct units, each optimized for specific strategic archetypes within the VEX Robotics ecosystem.
+                </p>
+</div>
+</header>
+<!-- Teams Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Team 654J (Worlds Highlight) -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary-container text-on-primary px-4 py-1 z-20 font-label font-bold text-[10px] tracking-widest uppercase">
+                    Worlds Qualifier
+                </div>
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Advanced V5 Robot Chassis with High Strength Gears" class="w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700" data-alt="High-tech VEX robot chassis with glowing red sensors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq6U3Lh2qr5UMcJBhP2lXPoB4QIJR1IVcpDtX37HWVY5Rjy1jDKcbwK1yiHPcfzXP6vY-Zndk08aSTnCGmRDGIzH8uTnVpZjCvOpv_GC8tjdrgcRPWXpE6yLyRSOCqv_hs15OEoGmG4Saeo7oQBNSuhKy5wplCoWGRlq9qHCHinbMxMoCc6uxdtA1dxOud6jWcVUTbHxOcqUJKay1D6sv0oYbhQQ7uwCpIz30D2vJ9U2FOZGnU8vJhRMWNmaH7qe1KQvGNDCVIsgRJ"/>
+<div class="absolute inset-0 scanline pointer-events-none opacity-30"></div>
+<div class="absolute bottom-2 left-2 font-label text-[8px] text-primary bg-black/50 px-2 py-1">SYS_REF: WLD-01</div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654J</h3>
+</div>
+<div class="text-right">
+<span class="font-label text-on-surface-variant text-[10px] tracking-widest uppercase block mb-1">Status</span>
+<span class="text-primary font-bold text-xs uppercase tracking-tighter">ELITE_OPERATIONAL</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 12.04GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654K -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Close up of robotic circuitry and wiring" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" data-alt="Close up of industrial robotic arm assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8CuL_YfGmH0usK9ZI_rAGqYLPyosLBBo9AqPn_qbXPVtGbU5cfSPyr_C2UbgyZFCEFB4kR4M5oRSEnAvhYnnCDnOGMUvU8AhouAE60FjJigZm3oBrDtwniVtqWRcfouxAF0Fp88aVBDbWs8Xr_IYMztJ1xeT7B5mN3Ov4nTbgzrvMHFreQNHCboi7J4VHRxlHjhvWVA5x_7M6Mixjjv1hagYee26a0tGleV0R83qdww5JkaM-AHfFjaJMh9BSj89KHGImK2181wOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-60"></div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654K</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 8.21GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654V -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="3D printed robot parts" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" data-alt="Technical blueprint display of a robot component" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr8EF5YBqCB_ugvsI3U-D5XyMogPmv37ESMrK2fDlhFDo-cFxYZAfgcKRubEtcugkI4z0rsn8UOa6UVD5I_54Ch03WpRMfe55Wtdin6S_2POYSnXJ0DBgy9gmznprL4X7GxvG1YwErWse0kr3n9toxS_RUUfd6-T_SuvpvQoF3ILIPTVVdPDFxQFhl2y9q8LiS8yH1EiQA-p9I2JfuHPejH4X6o5SF32rgeRTpK5StDAfxPK6ASK01MEiqjQU4NKQ2lnI-5Z2LoZEj"/>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654V</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 4.55GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654X -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Robotic engineering process" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" data-alt="Digital HUD interface showing telemetry data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5U0eZ7LqmMpZgvFhPjkpYRmb9vrsLWAy6yaly-4JVGRNxBxWZxIbb6DJbiP_Zo6b4DvOdkBDIGK9jMiNrK6-zqbJYMoMaBJ7ey-gq8SC1Wiv4ZX6xBCdiXR3y4DB2WD-LquOPLSexBVBxcz_Z62SvuLe66HiX--_EmTfE_cQ5XIWxcrouy3d2HR6u5-qPSMx29kYNKoQ8ijoHWbxZUtlixTNKFbPpibNTDztj7Lw95t5bG2zRohS6-40hhNR1RYLMgCGWSBIMuoOj"/>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654X</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 10.12GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654B -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Futuristic robot eyes" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" data-alt="Close up of a metallic robot chassis plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr70RkUxhZdH_eu1QNkBvIM3CLbP_gdOraIAq4JmyQrksTtX6ryskT-xOUPsvkLHKsuRCfCbpGDvW5b5mAK0F7ofPOfnnTN7dMFEG5aGMkbUzTlM0C1ICrWbADOvaS4rqGJjBDUhYT46cPl35xiYfNFM0tfUUVncBPlan6F7ghnwGjbkC0BWGSrO1JXyKraXT6Q1Xy-VAHzsdBkUTbRYFWuP98WdVEiNCXdoUqA4i0n5A3KX1BO2Xcpnp9DKKg1AKHnQuR1NtBwSsD"/>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654B</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 6.72GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654W -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<img alt="Metal gears and components" class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-700" data-alt="Abstract macro shot of robot gears and chains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUjU74l8_gas-hk3LuOGFyJ6EsK3uMwf2H4apT4kxFHj7-8SfRjjlI_q4vaV3u6m49TlQAkirkeThE1Tz3ZZK85VPoqLmcwtyP78acbZfMa84szl_sR1OuCu6bb-PHYYzRW1SzwdP88jdAclF8e-dOoOdx1RSQrKVyviYZw7FGDWBUjiIrzLsNvoodAAPl7UYFzXdNOZqYkXWZxDQM6PmUFZ88cFQghod9s7JBmsucLmizgF75D-wKkS6FHp3D5WKzUbAWHcpAk-5p"/>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654W</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 9.33GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654T -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-surface-variant to-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="absolute inset-0 scanline pointer-events-none opacity-20"></div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654T</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 3.19GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654Z -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-tr from-surface-variant to-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="settings_accessibility">settings_accessibility</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654Z</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 5.88GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654G -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-b from-surface-variant to-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="hub">hub</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654G</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 7.41GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654A -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-l from-surface-variant to-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="construction">construction</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654A</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 11.20GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Team 654Y -->
+<div class="relative group bg-surface-container-low border border-outline-variant/20 overflow-hidden">
+<div class="hud-bracket p-6 h-full flex flex-col">
+<div class="relative aspect-video bg-surface-container-highest mb-6 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-r from-surface-variant to-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="hardware">hardware</span>
+</div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<span class="font-label text-primary/60 text-[10px] tracking-widest uppercase block mb-1">Squad Designation</span>
+<h3 class="text-4xl font-headline font-black text-white">654Y</h3>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<span class="font-label text-[10px] text-on-surface-variant/50">DATA_RECORDS: 4.02GB</span>
+<a class="text-primary flex items-center gap-2 group/btn font-label text-xs tracking-widest uppercase font-bold" href="#">
+                            Learn More 
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Background Detail -->
+<div class="mt-32 p-12 border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute inset-0 scanline pointer-events-none opacity-10"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div>
+<h4 class="font-headline text-3xl font-bold uppercase mb-2">Technical Roster Statistics</h4>
+<p class="font-label text-[10px] tracking-[0.2em] text-on-surface-variant">TOTAL_SQUADS: 11 | STATUS: COMPETITIVE_ACTIVE | LAST_UPDATE: 2024.05.12</p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<span class="block font-headline text-5xl font-black text-primary">11</span>
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant">ACTIVE_TEAMS</span>
+</div>
+<div class="text-center">
+<span class="block font-headline text-5xl font-black text-primary">01</span>
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant">WORLDS_QUAL</span>
+</div>
+<div class="text-center">
+<span class="block font-headline text-5xl font-black text-primary">42</span>
+<span class="font-label text-[10px] tracking-widest text-on-surface-variant">TROPHIES_WON</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-[#0A0A0A] border-t-0">
+<div class="mb-6 md:mb-0">
+<span class="text-[#ffb4aa] font-black font-headline text-xl tracking-tighter">L.T. ROBOTICS</span>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex gap-6">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Privacy</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-gray-600 hover:text-[#ffb4aa] transition-colors" href="#">Sponsorship_Packet</a>
+</div>
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-[#ffb4aa]/60">© 2024 L.T. ROBOTICS | HIGH_PERFORMANCE_ENGINEERING</p>
+</div>
+</footer>
+</body></html>
